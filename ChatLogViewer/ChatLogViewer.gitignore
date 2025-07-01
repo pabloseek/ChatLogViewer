@@ -1,0 +1,39 @@
+# Ignoruj pliki œrodowiska Visual Studio
+# Œrodowisko Visual Studio
+.vs/
+*.user
+*.suo
+
+# Buildy
+bin/
+obj/
+
+# Pliki tymczasowe i cache
+*.log
+*.tmp
+*.cache
+*.db
+
+# NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuget.cache
+*.nuget.dgspec.json
+
+# MSBuild
+*.BuildWithSkipAnalyzers
+*.FileListAbsolute.txt
+
+# Pliki testowe i publish
+TestResults/
+*.publish.xml
+
+# Rider/JetBrains (opcjonalnie)
+.idea/
+
+# Systemowe (opcjonalnie)
+Thumbs.db
+.DS_Store

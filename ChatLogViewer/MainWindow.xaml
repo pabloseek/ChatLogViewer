@@ -1,0 +1,23 @@
+﻿<Window x:Class="ChatLogViewer.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chat Log Viewer" Height="600" Width="800">
+    <DockPanel>
+        <Button Content="Wczytaj log" DockPanel.Dock="Top" Padding="10"
+                Click="Load_Click" />
+        <ListView ItemsSource="{Binding ChatMessages}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="5" Padding="5" BorderBrush="LightGray" BorderThickness="0,0,0,1">
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold" Text="{Binding Username}" />
+                            <TextBlock FontSize="10" Foreground="Gray"
+                                       Text="{Binding Timestamp}" />
+                            <TextBlock Text="{Binding Message}" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </DockPanel>
+</Window>
